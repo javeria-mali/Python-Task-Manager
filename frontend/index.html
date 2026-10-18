@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <h2>✦ Taskly</h2>
+            <p class="side-label">WORKSPACE</p>
+            <a class="active" href="#">▦ Dashboard</a>
+            <a href="#tasks">✓ My Tasks</a>
+            <div class="sidebar-bottom">Stay focused. You've got this! 💜</div>
+        </aside>
+
+        <main class="main">
+            <header>
+                <div>
+                    <p class="eyebrow">YOUR PERSONAL WORKSPACE</p>
+                    <h1>My Tasks <span>✦</span></h1>
+                    <p class="subtitle">Small steps make big progress.</p>
+                </div>
+                <div class="date" id="today"></div>
+            </header>
+
+            <section class="stats">
+                <div class="stat-card">
+                    <p>Total Tasks</p>
+                    <h2 id="total">0</h2>
+                    <span>All your tasks</span>
+                </div>
+                <div class="stat-card">
+                    <p>Completed</p>
+                    <h2 id="completed">0</h2>
+                    <span>Tasks finished ✓</span>
+                </div>
+                <div class="stat-card">
+                    <p>Pending</p>
+                    <h2 id="pending">0</h2>
+                    <span>Ready to tackle</span>
+                </div>
+            </section>
+
+            <section class="task-panel" id="tasks">
+                <div class="panel-heading">
+                    <div>
+                        <h2>My Task List</h2>
+                        <p>Organize your day, one task at a time.</p>
+                    </div>
+                    <span class="pill">✦ Stay productive</span>
+                </div>
+
+                <form id="task-form">
+                    <input id="task-input" type="text"
+                           placeholder="What do you need to do?" required>
+                    <button type="submit">+ Add Task</button>
+                </form>
+
+                <div class="filters">
+                    <button class="filter active" data-filter="all">All Tasks</button>
+                    <button class="filter" data-filter="pending">Pending</button>
+                    <button class="filter" data-filter="completed">Completed</button>
+                </div>
+
+                <div id="task-list"></div>
+                <p class="footer-note">Made with care and a little bit of purple magic 💜</p>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
